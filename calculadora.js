@@ -54,11 +54,6 @@ function previsaoALongoPrazo(value,percentage,years,days){
     }
 
 
-// console.log('Valor diário arrecadado R$',calculaPorcentagem(aporte,porcentagem));
-
-// calculaJurosAcumulados(dias,aporte,porcentagem)
-
-//  previsaoALongoPrazo(aporte,porcentagem,anos,dias)
 
 btn .addEventListener('click',(e)=>{
     e.preventDefault();
