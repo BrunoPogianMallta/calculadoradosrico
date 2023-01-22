@@ -1,11 +1,35 @@
 .main {
-    display:inline-block;
     border: solid 1px black;
     margin: 0 auto;
     padding: 10px;
+    height: 250px;
+    width: 200px;
 }
 input{
-    display: block;
     border: solid 1px  black;
     margin: 5px;
+}
+.resultado-container{
+    /* display: flex; */
+    justify-content: center;
+    display: none;
+
+}
+button {
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+.valor-texto{
+    font-size: 20px;
+    color: green;
+}
+
+#resultado {
+    background-color: green;
+    font-size: 20px;
+    color:white;  
+    border-radius: 5px;
+    text-align: center;
 }
