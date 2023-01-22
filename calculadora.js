@@ -23,26 +23,22 @@ console.log('apoha',typeof aporte)
 
 function calculaJurosAcumulados(days,value,percentage){
          acumulator = value;
-         console.log(typeof value)
-         console.log('valor do acumulator',acumulator)
          let cont =0;
-         let impostoAnual =0;
+         let impostoMensal =0;
+         let lucroMensal = 0;
         for(let i =1;i <= days ;i++){
           let valorDiario = calculaPorcentagem(acumulator,percentage);
-        //   console.log(`Valor do dia ${i}: R$ ${acumulator}`)
+          lucroMensal += valorDiario
           acumulator += valorDiario 
-          console.log('valor do  dia ',i ,acumulator)
           cont ++
           if(cont == 30){
-            let juros = (20 * acumulator) /100
+            let juros = (20 * lucroMensal) /100
             acumulator -= juros;
-            impostoAnual += acumulator
+            impostoMensal += acumulator
             console.log('Valor depois do imposto desse mes',acumulator)
             cont = 0;
           }
         }
-        // console.log('Valor do total de imposto pago no ano: ',impostoAnual)
-        console.log('valor',acumulator)
         return acumulator
 }
 

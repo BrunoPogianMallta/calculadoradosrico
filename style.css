@@ -1,0 +1,8 @@
+.main {
+    display:inline-block;
+    border: solid 1px black;
+}
+input{
+    display: block;
+    border: solid 1px  black;
+}
