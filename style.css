@@ -1,8 +1,11 @@
 .main {
     display:inline-block;
     border: solid 1px black;
+    margin: 0 auto;
+    padding: 10px;
 }
 input{
     display: block;
     border: solid 1px  black;
+    margin: 5px;
 }

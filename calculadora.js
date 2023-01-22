@@ -29,6 +29,7 @@ function calculaJurosAcumulados(days,value,percentage){
           lucroMensal += valorDiario
           acumulator += valorDiario 
           cont ++
+          console.log('lucro',lucroMensal)
           if(cont == 30){
             let juros = (20 * lucroMensal) /100
             acumulator -= juros;
@@ -61,7 +62,7 @@ btn .addEventListener('click',(e)=>{
     let valor = Number(aporte.value) 
     let dia = Number(dias.value) 
     let porcent = Number(porcentagem.value) 
-    resultado.value = calculaJurosAcumulados(dia,valor,porcent).toFixed(2)
+    resultado.value ="R$ "+calculaJurosAcumulados(dia,valor,porcent).toFixed(2)
 
     console.log(valor)
     console.log(dias.value)
