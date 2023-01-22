@@ -19,8 +19,6 @@ function calculaPorcentagem(value,percentage){
     return valorCalculado;
 }
 
-console.log('apoha',typeof aporte)
-
 function calculaJurosAcumulados(days,value,percentage){
          acumulator = value;
          let cont =0;
