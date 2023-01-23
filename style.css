@@ -1,14 +1,39 @@
+body {
+    background-image: url(../calculadoradosrico/assets/dolares.jpg);
+    
+}
+
 .main {
     border: solid 1px black;
+    border-radius: 5px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 30px;
     height: 250px;
     width: 200px;
+    margin-top: 10px;
+    /* background-image: url('../calculadoradosrico/assets/dolares.jpg'); */
+    background-size: cover;
+    font-size: 20px;
+    font-weight:bolder;
+    background-color: black;
+    color: white;
 }
 input{
     border: solid 1px  black;
     margin: 5px;
+    font-weight: bold;
+    
 }
+input:focus {
+    background-color: rgb(129, 180, 133);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
 .resultado-container{
     /* display: flex; */
     justify-content: center;
@@ -17,13 +42,24 @@ input{
 }
 button {
     border-radius: 5px;
-    padding: 5px;
+    padding: 9px;
     margin-left: 35px;
     margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: linear-gradient( rgba(62,74,61,1) 4%, rgba(9,121,18,1) 47%, rgba(92,200,47,1) 100%); 
+    color: white;
+    transition:ease-in-out;
+    padding: 8px;
 }
 .valor-texto{
     font-size: 20px;
-    color: green;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 #resultado {
@@ -32,4 +68,16 @@ button {
     color:white;  
     border-radius: 5px;
     text-align: center;
+}
+
+.aviso{
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 3px rgb(155, 13, 13);
+    background-color: black;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
 }

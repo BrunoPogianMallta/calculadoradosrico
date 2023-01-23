@@ -3,16 +3,23 @@
 
 
 let aporte =document.getElementById('aporte');
-console.log(aporte)
 let porcentagem = document.getElementById('porcentagem');
 let dias =document.getElementById('dias');
 let resultado = document.getElementById('resultado');
 let anos =10;
 let btn = document.getElementById('calcularBtn');
 let resultadoContainer = document.querySelector('.resultado-container');
+let aviso = document.querySelector('.aviso');
+ 
 
 let acumulator = 0
 
+
+function limpaCampos(){
+  aporte.value= '';
+  porcentagem.value = '';
+  dias.value = '';
+}
 
 
 function calculaPorcentagem(value,percentage){
@@ -23,53 +30,47 @@ function calculaPorcentagem(value,percentage){
 function calculaJurosAcumulados(days,value,percentage){
          acumulator = value;
          let cont =0;
-         let impostoMensal =0;
          let lucroMensal = 0;
+
+         if(acumulator === 0 || days === 0 || percentage === 0){
+           alert('Vai calcular o que ai meu amigo?')
+           limpaCampos();
+           return;
+         }
+         if(percentage > 100){
+           alert('AHH!! mais de 100% de lucro ao dia? ta de palhaçada né?')
+         }
+         if(days > 18250){
+           alert('Quem guarda dinheiro por tanto tempo?')
+         }
         for(let i =1;i <= days ;i++){
           let valorDiario = calculaPorcentagem(acumulator,percentage);
           lucroMensal += valorDiario
           acumulator += valorDiario 
           cont ++
-          console.log('valor atual do aporte',acumulator,'dia'+i)
-          console.log('lucro',lucroMensal)
-
+          
           if(cont == 30){
-            console.log('valor total do mes sem juros',acumulator)
             let juros = (20 * lucroMensal) /100
             console.log('valor juros',juros)
             lucroMensal-= juros;
-            console.log('lucro',lucroMensal)
-            // acumulator+= lucroMensal;
-            console.log('valor do acumulator apor 30 dias',acumulator)
-            console.log('Valor depois do imposto desse mes',acumulator)
             cont = 0;
           }
         }
+
         return acumulator
 }
 
-function previsaoALongoPrazo(value,percentage,years,days){
-    let valorAnual = 0;
-    for(let i = 1; i <= days; i++){
-        valorAnual += calculaJurosAcumulados(days,value,percentage)
-        console.log(`ano ${i}: R$${valorAnual}`)
-    }
-    if(days >= 365){
-        console.log(`Valor ao  final de ${days/30} anos ${valorAnual}`)
-    }
-
-    console.log(`Valor ao  final de ${days/30} meses ${valorAnual}`)
-    }
 
 
 
 btn .addEventListener('click',(e)=>{
     e.preventDefault();
-   
     let valor = Number(aporte.value) 
     let dia = Number(dias.value) 
-    let porcent = Number(porcentagem.value) 
+    let porcent = Number(porcentagem.value)
     resultado.value ="R$ "+calculaJurosAcumulados(dia,valor,porcent).toFixed(2)
     resultadoContainer.style = 'display:flex';
+    aviso.style = 'display:none';
+    limpaCampos();
 
 })
