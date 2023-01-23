@@ -37,12 +37,15 @@ function calculaJurosAcumulados(days,value,percentage){
            limpaCampos();
            return;
          }
+
          if(percentage > 100){
            alert('AHH!! mais de 100% de lucro ao dia? ta de palhaçada né?')
          }
+
          if(days > 18250){
            alert('Quem guarda dinheiro por tanto tempo?')
          }
+         
         for(let i =1;i <= days ;i++){
           let valorDiario = calculaPorcentagem(acumulator,percentage);
           lucroMensal += valorDiario
