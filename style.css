@@ -1,5 +1,7 @@
 body {
     background-image: url(../calculadoradosrico/assets/dolares.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 
@@ -8,10 +10,9 @@ body {
     border-radius: 5px;
     margin: 0 auto;
     padding: 30px;
-    height: 250px;
+    height: 380px;
     width: 200px;
     margin-top: 10px;
-    /* background-image: url('../calculadoradosrico/assets/dolares.jpg'); */
     background-size: cover;
     font-size: 20px;
     font-weight:bolder;
@@ -19,9 +20,13 @@ body {
     color: white;
 }
 input{
+    text-align: center;
     border: solid 1px  black;
-    margin: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
     font-weight: bold;
+    font-size: 14px;
     
 }
 input:focus {
@@ -41,11 +46,15 @@ input[type=number]::-webkit-inner-spin-button,
 
 }
 button {
+    display: block;
     border-radius: 5px;
     padding: 9px;
-    margin-left: 35px;
-    margin-top: 10px;
+    /* margin-left: 35px; */
+    margin: 0 auto;
+    margin-top: 50px;
     cursor: pointer;
+    font-size: 20px;
+    width: 180px;
 }
 
 button:hover{
@@ -63,11 +72,14 @@ button:hover{
 }
 
 #resultado {
-    
+    display: block;
     background-color: green;
     font-size: 20px;
     color:white;  
     border-radius: 5px;
+    text-align: center;
+}
+p{
     text-align: center;
 }
 
@@ -82,4 +94,10 @@ button:hover{
     padding: 20px;
     border-radius: 5px;
     color: white;
+}
+
+label{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
 }

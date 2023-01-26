@@ -40,11 +40,13 @@ function calculaJurosAcumulados(days,value,percentage){
 
          if(percentage > 100){
            alert('AHH!! mais de 100% de lucro ao dia? ta de palhaçada né?');
+           limpaCampos();
            return;
          }
 
          if(days > 18250){
            alert('Quem guarda dinheiro por tanto tempo?')
+           limpaCampos();
            return;
          }
 
@@ -54,7 +56,7 @@ function calculaJurosAcumulados(days,value,percentage){
           acumulator += valorDiario 
           cont ++
           
-          if(cont == 30){
+          if(cont == 22){
             let juros = (20 * lucroMensal) /100
             console.log('valor juros',juros)
             lucroMensal-= juros;
@@ -73,7 +75,8 @@ btn .addEventListener('click',(e)=>{
     let valor = Number(aporte.value) 
     let dia = Number(dias.value) 
     let porcent = Number(porcentagem.value)
-    resultado.value ="R$ "+calculaJurosAcumulados(dia,valor,porcent).toFixed(2)
+    resultado.value =calculaJurosAcumulados(dia,valor,porcent).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
     resultadoContainer.style = 'display:flex';
     aviso.style = 'display:none';
     limpaCampos();

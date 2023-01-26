@@ -10,26 +10,26 @@
 <body><div class="aviso">
         <h1>Calculadora de juros Compostos</h1>
         <p>Por se tratar de juros compostos os valores são limitados</p>
-        <p>A cada 30 dias , 20% é deduzido do lucro.</p>
+        <p>A cada 22 dias , 20% é deduzido do lucro.</p>
         <p>O calculo é baseado no imposto de renda cobrado sobre o lucro no minidolar.</p>
     </div>
     <form class="main">
-        <label >Digita o valor do aporte</label>
+        <label > Valor do Aporte</label>
         <input id="aporte" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
         type = "number"
         maxlength = "6">
-        <label >Digita a porcentagem</label>
+        <label >Porcentagem Diária</label>
         <input id="porcentagem" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
         type = "number"
         maxlength = "3">
-        <label >Digita quantidade de dias</label>
+        <label > Quantidade de Dias</label>
         <input id="dias" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
         type = "number"
         maxlength = "5">
-        <button id="calcularBtn">Calcular a parada</button>
+        <button id="calcularBtn">Calcular</button>
     </form>
     <div class="resultado-container">
-        <p class="valor-texto">Valor já com desconto: <input id="resultado" readonly type="text"></p>
+        <p class="valor-texto">Valor já com desconto <input id="resultado" readonly type="text"></p>
     </div>
     <script src="calculadora.js"></script>
 </body>
