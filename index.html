@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <title>calcular a parada</title>
 </head>
-<body><div class="aviso">
+<body>
+    <div id="principal">
+    <div class="aviso">
         <h1>Calculadora de juros Compostos</h1>
         <p>Por se tratar de juros compostos os valores são limitados</p>
         <p>A cada 22 dias , 20% é deduzido do lucro.</p>
         <p>O calculo é baseado no imposto de renda cobrado sobre o lucro no minidolar.</p>
     </div>
+
     <form class="main">
         <label > Valor do Aporte</label>
         <input id="aporte" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
@@ -28,9 +31,12 @@
         maxlength = "5">
         <button id="calcularBtn">Calcular</button>
     </form>
+
     <div class="resultado-container">
         <p class="valor-texto">Valor já com desconto <input id="resultado" readonly type="text"></p>
     </div>
+    
+ </div>
     <script src="calculadora.js"></script>
 </body>
 </html>

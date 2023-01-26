@@ -5,13 +5,21 @@ body {
     
 }
 
+#principal{
+    width: 80vw;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+}
+
 .main {
-    border: solid 1px black;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px rgb(110, 10, 10);
     border-radius: 5px;
     margin: 0 auto;
     padding: 30px;
-    height: 380px;
-    width: 200px;
+    height: auto;
+    width: 25%;
     margin-top: 10px;
     background-size: cover;
     font-size: 20px;
@@ -27,6 +35,7 @@ input{
     margin-top: 20px;
     font-weight: bold;
     font-size: 14px;
+    width: auto;
     
 }
 input:focus {
@@ -54,7 +63,7 @@ button {
     margin-top: 50px;
     cursor: pointer;
     font-size: 20px;
-    width: 180px;
+    /* width: 180px; */
 }
 
 button:hover{
@@ -84,8 +93,6 @@ p{
 }
 
 .aviso{
-
-    width: 450px;
     display: flex;
     flex-wrap: wrap;
     border: solid 3px rgb(155, 13, 13);
@@ -100,4 +107,130 @@ label{
     display: block;
     text-align: center;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 400px) {
+        
+    .aviso{
+        width: 80%;
+    }
+    .main{
+        width: 75%;
+    }
+	input{
+        text-align: center;
+        width: 100%;
+    }
+    label{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 16px;
+        
+    }
+    .valor-texto{
+        width: 25%;
+    }
+    #resultado{
+        display: inline-block;
+        justify-content: center;
+        /* text-align: center; */
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .aviso{
+        width: 68%;
+    }
+    .main{
+        width: 65%;
+    }
+	input{
+        text-align: center;
+        width: 100%;
+    }
+    label{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 16px;
+        
+    }
+    #resultado{
+        display: inline-block;
+        justify-content: center;
+        /* text-align: center; */
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 805px) {
+    .aviso{
+        width: 50%;
+    }
+    .main{
+        width: 45%;
+    }
+	input{
+        text-align: center;
+        width: 100%;
+    }
+    label{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 16px;
+        
+    }
+}
+
+@media screen and (max-width: 1200px) {
+	input{
+        text-align: center;
+        width: 100%;
+    }
+    label{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 16px;
+        
+    }
+}
+@media screen and (max-width: 2000px) {
+    .aviso{
+        width: 30%;
+    }
+    .main{
+        width: 20%;
+    }
+	input{
+        text-align: center;
+        width: 100%;
+    }
+    label{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 16px;
+        
+    }
+    .valor-texto{
+        width: 40%;
+    }
+    #resultado{
+        display: inline-block;
+        justify-content: center;
+        /* text-align: center; */
+        width: 90%;
+    }
+    label{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
 }
